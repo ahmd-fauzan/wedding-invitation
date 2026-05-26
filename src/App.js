@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import "./App.css";
 
 import Invitation from "./pages/Invitation/Invitation";
@@ -15,7 +15,7 @@ function App() {
 
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const playMusic = () => {
+  const playMusic = useCallback(() => {
     console.log("play music");
     if (!audioRef.current) return;
 
@@ -23,11 +23,12 @@ function App() {
       .play()
       .then(() => {
         setIsPlaying(true);
+        console.log(isPlaying);
       })
       .catch((error) => {
         console.log(error);
       });
-  };
+  }, [isPlaying]);
 
   const handleOpen = () => {
     playMusic();
@@ -39,9 +40,10 @@ function App() {
     }, 1000);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     playMusic();
-    
+
     const handleVisibilityChange = () => {
       if (document.hidden) {
         audioRef.current.pause();
@@ -55,7 +57,7 @@ function App() {
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [playMusic]);
 
   return (
     <>
