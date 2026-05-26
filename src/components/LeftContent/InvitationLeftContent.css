@@ -1,0 +1,125 @@
+.left-section{
+    position: sticky;
+    top: 0;
+    width: 65%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-section .overlay{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.45)
+    );
+}
+
+.left-section .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: white;
+    padding: 44px 112px 96px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.left-section .subtitle{
+    font-size: 16px;
+    letter-spacing: 6px;
+    margin-bottom: 32px;
+}
+
+.left-section .title{
+    font-size: 64px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 42px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.left-section .quote{
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.left-section .guest-label{
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.left-section .guest-name{
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 1024px){
+
+    .left-section .content{
+        padding: 40px 88px 72px 48px;
+    }
+
+    .left-section .subtitle{
+        font-size: 14px;
+        margin: 12px 0px 28px;
+    }
+
+    .left-section .title{
+        font-size: 56px;
+        margin-bottom: 40px;
+    }
+
+    .left-section .guest-name{
+        font-size: 24px;
+    }
+
+    .left-section .guest-label{
+        font-size: 15px;
+        margin: 8px 0px 20px;
+    }
+
+    .left-section .quote{
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .left-section .content{
+        padding: 32px 56px 42px 32px;
+    }
+
+    .left-section .subtitle{
+        font-size: 12px;
+        margin: 8px 0px 24px;
+    }
+
+    .left-section .title{
+        font-size: 48px;
+        margin-bottom: 32px;
+    }
+
+    .left-section .guest-name{
+        font-size: 20px;
+    }
+
+    .left-section .guest-label{
+        font-size: 14px;
+        margin: 6px 0px 16px;
+    }
+
+    .left-section .quote{
+        font-size: 12px;
+    }
+
+}

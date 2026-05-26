@@ -1,0 +1,40 @@
+.profile-section {
+  margin: 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile-section .profile-border {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 18px;
+}
+
+.profile-section .profile-content {
+  text-align: center;
+}
+
+.profile-section .profile-content .profile-name {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: "Great Vibes", cursive;
+}
+
+.profile-section .profile-content .subtitle{
+    margin: 0px 0px 12px;
+    color: #4D4D4D;
+    font-size: 12px;
+}
+
+.profile-section .profile-content .profile-parent{
+    margin: 0;
+    color: #4D4D4D;
+    font-size: 14px;
+    font-weight: bold;
+}

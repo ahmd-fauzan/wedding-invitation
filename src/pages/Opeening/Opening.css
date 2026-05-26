@@ -1,0 +1,120 @@
+.opening-page{
+  position: fixed;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  inset: 0;
+  z-index: 999;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.opening-page.fade-out{
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.opening-page .background-image{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 2s ease-in-out, transform 6s ease;
+  will-change: opacity, transform;
+}
+
+.opening-page .background-image.active{
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.opening-page .overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.45)
+  );
+}
+
+.opening-page .content-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.opening-page .content{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.opening-page .subtitle{
+  font-size: 14px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.opening-page .title{
+  font-size: 56px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 42px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.opening-page .guest-section{
+  margin-bottom: 40px;
+}
+
+.opening-page .guest-label{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.opening-page .guest-name{
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.opening-page .open-button{
+  padding: 14px 32px;
+
+  background: rgba(255,255,255,0.15);
+
+  border: 1px solid white;
+  border-radius: 999px;
+
+  color: white;
+  font-size: 16px;
+
+  backdrop-filter: blur(6px);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.opening-page .open-button:hover{
+  background: white;
+  color: black;
+}

@@ -1,0 +1,108 @@
+.ending-section{
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    inset: 0;
+    z-index: 999;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.ending-section.fade-out{
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.ending-section .background-image{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 2s ease-in-out, transform 6s ease;
+  will-change: opacity, transform;
+}
+
+.ending-section .background-image.active{
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.ending-section .overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.45)
+  );
+}
+
+.ending-section .content-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.ending-section .content{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ending-section .subtitle{
+  font-size: 12px;
+  letter-spacing: 6px;
+}
+
+.ending-section .title{
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+}
+
+.ending-section .date{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.ending-section .open-button{
+  padding: 10px 18px;
+
+  background: rgba(255,255,255,0.15);
+
+  border: 1px solid white;
+  border-radius: 999px;
+
+  color: white;
+  font-size: 12px;
+
+  backdrop-filter: blur(6px);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.ending-section .open-button:hover{
+  background: white;
+  color: black;
+}

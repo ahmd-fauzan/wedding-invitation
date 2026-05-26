@@ -1,0 +1,132 @@
+.rekening-item-section {
+  background-image: url("/public/images/card-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  aspect-ratio: 16 / 9;
+}
+
+.card-content {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-left {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 16px;
+}
+
+.rekening-item-section .card-chip {
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.rekening-item-section .card-name {
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: #111;
+  margin: 16px 0px 0px 0px;
+}
+
+.rekening-item-section .card-number {
+  margin-top: 6px;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  color: #222;
+}
+
+.rekening-item-section .card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.bank-logo {
+  width: 72px;
+
+  object-fit: contain;
+}
+
+.copy-button {
+  margin-top: 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 8px 16px;
+
+  background: #91a8d6;
+
+  color: white;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.copy-button:hover {
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+@media (min-width: 567px) {
+  .card-left {
+    padding: 16px 0px 0px 16px;
+  }
+
+  .rekening-item-section .card-chip {
+    width: 64px;
+  }
+
+  .rekening-item-section .card-name {
+    margin-top: 32px;
+    font-size: 24px;
+    line-height: 0.8;
+  }
+
+  .rekening-item-section .card-number {
+    margin-top: 8px;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+  }
+
+  .bank-logo {
+    width: 140px;
+  }
+
+  .copy-button {
+    margin-top: 32px;
+
+    border-radius: 14px;
+
+    padding: 14px 26px;
+
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,29 @@
+.gift-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 42px 0px;
+  text-align: center;
+  padding: 0px 24px;
+}
+
+.gift-section .title {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0px 0px 12px 0px;
+  font-family: "Great Vibes", cursive;
+  color: #243b6b;
+}
+
+.gift-section .subtitle {
+  font-size: 14px;
+  color: grey;
+}
+
+@media (min-width: 567px) {
+  .gift-section{
+    padding: 0px 32px;
+  }
+}

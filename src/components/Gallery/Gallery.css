@@ -1,0 +1,99 @@
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 42px 0px;
+  text-align: center;
+  padding: 0px 24px;
+}
+
+.gallery-section .title {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0px 0px 24px 0px;
+  font-family: "Great Vibes", cursive;
+  color: #243b6b;
+}
+
+.gallery-section .gallery {
+  column-count: 2;
+  column-gap: 12px;
+}
+
+.gallery-section .gallery img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    filter 0.35s ease;
+}
+
+.gallery img:hover{
+    transform: scale(1.03);
+
+    opacity: 0.92;
+
+    filter: brightness(1.05);
+}
+
+.image-modal {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 9999;
+
+  padding: 20px;
+
+  cursor: pointer;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-image {
+  max-width: 90%;
+
+  max-height: 90%;
+
+  border-radius: 16px;
+
+  object-fit: contain;
+
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

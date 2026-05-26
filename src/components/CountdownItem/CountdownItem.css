@@ -1,0 +1,25 @@
+.countdown-item{
+    border-radius: 8px;
+    background-color: white;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
+    gap: 6px;
+    flex: 1 1 0px;
+    width: 0;
+}
+
+.countdown-item .countdown-value{
+    color: #243B6B;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.countdown-item .countdown-label{
+    color: #243B6B;
+    font-size: 14px;
+    margin: 0;
+}

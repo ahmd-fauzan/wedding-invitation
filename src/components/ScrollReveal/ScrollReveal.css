@@ -1,0 +1,16 @@
+.scroll-reveal{
+
+    height: 100%;
+
+    opacity: 0;
+
+    transform: translateX(120px);
+
+    transition:
+        opacity 0.05s linear,
+        transform 0.05s linear;
+
+    will-change:
+        opacity,
+        transform;
+}
