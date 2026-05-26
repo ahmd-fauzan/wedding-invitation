@@ -39,18 +39,6 @@ function App() {
     }, 1000);
   };
 
-  const toggleMusic = () => {
-    if (!audioRef.current) return;
-
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      playMusic();
-    }
-
-    setIsPlaying(!isPlaying);
-  };
-
   useEffect(() => {
     playMusic();
     

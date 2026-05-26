@@ -7,8 +7,8 @@ const Invitation = () => {
   const data = invitationData;
 
   // ambil nama tamu dari URL
-  const query = new URLSearchParams(window.location.search);
-  const guest = query.get("to");
+  // const query = new URLSearchParams(window.location.search);
+  // const guest = query.get("to");
 
   return (
     <div className="invitation-page">

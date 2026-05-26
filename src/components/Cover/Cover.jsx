@@ -13,7 +13,7 @@ export default function Cover() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   const saveToCalendar = () => {
     const startDate = "20260614T070000";

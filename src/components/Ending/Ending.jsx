@@ -13,7 +13,7 @@ const Ending = () => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="ending-section">
