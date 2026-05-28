@@ -1,15 +1,31 @@
+import { useEffect, useState } from "react";
 import CountdownItem from "../CountdownItem/CountdownItem";
 import "./Countdown.css";
+import { getTimeRemaining } from "../../utils/Time";
 
-const Countdown = () => {
+const Countdown = ({date}) => {
+
+  const weddingDate = new Date(`${date}T07:00:00`).getTime();
+
+  const [timeLeft, setTimeLeft] = useState(getTimeRemaining(weddingDate));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft(getTimeRemaining(weddingDate));
+    }, 1000);
+
+    console.log(timeLeft);
+
+    return () => clearInterval(interval);
+  }, [weddingDate]);
   return (
     <div className="countdown-section">
       <h1 className="title">Countdown</h1>
       <div className="countdown-item-container">
-        <CountdownItem label={"Hari"} value={"10"} />
-        <CountdownItem label={"Jam"} value={"4"} />
-        <CountdownItem label={"Menit"} value={"30"} />
-        <CountdownItem label={"Detik"} value={"50"} />
+        <CountdownItem label={"Hari"} value={timeLeft.days} />
+        <CountdownItem label={"Jam"} value={timeLeft.hours} />
+        <CountdownItem label={"Menit"} value={timeLeft.minutes} />
+        <CountdownItem label={"Detik"} value={timeLeft.seconds} />
       </div>
       <div className="quote-section">
         <p className="quote">

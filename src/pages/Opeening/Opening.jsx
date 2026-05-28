@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Opening.css";
 
-export default function Opening({ onOpen, isClosing }) {
+export default function Opening({ groom, bride, guest, onOpen, isClosing }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,10 +29,10 @@ export default function Opening({ onOpen, isClosing }) {
       <div className="content-wrapper">
         <div className="content">
           <p className="subtitle">The Wedding Of</p>
-          <h1 className="title">Ai Lina & Fauzan</h1>
+          <h1 className="title">{bride} & {groom}</h1>
           <div className="guest-section">
             <p className="guest-label">Kpd Bpk/Ibu/Saudara/I</p>
-            <h2 className="guest-name">Tamu Undangan</h2>
+            <h2 className="guest-name">{guest}</h2>
           </div>
           <button className="open-button" onClick={onOpen}>Buka Undangan</button>
         </div>

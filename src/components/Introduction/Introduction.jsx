@@ -2,7 +2,7 @@ import Divider from "../Divider/Divider";
 import Profile from "../Profile/Profile";
 import "./Introduction.css";
 
-const Introduction = () => {
+const Introduction = ({groomFullName, brideFullName, groomParent, brideParent, groomImage, brideImage}) => {
   return (
     <div className="introduction-section">
       <div className="content-wrapper">
@@ -13,15 +13,15 @@ const Introduction = () => {
           kami.
         </p>
         <Profile
-          image={"/images/profile2.webp"}
-          name={"Ai Lina Marlina"}
-          parentName={"U. Lukman (Alm) & Wati Saripah"}
+          image={brideImage}
+          name={brideFullName}
+          parentName={brideParent}
         />
         <Divider />
         <Profile
-          image={"/images/profile1.webp"}
-          name={"Ahmad Fauzan"}
-          parentName={"Uyu Wahyudin & Imas Sumarni"}
+          image={groomImage}
+          name={groomFullName}
+          parentName={groomParent}
         />
       </div>
     </div>

@@ -1,18 +1,12 @@
-import { invitationData } from "../../data/invitation";
 import InvitationLeftContent from "../../components/LeftContent/InvitationLeftContent";
 import InvitationRightContent from "../../components/RightContent/InvitationRightContent";
 import "./Invitation.css";
 
-const Invitation = () => {
-  const data = invitationData;
-
-  // ambil nama tamu dari URL
-  // const query = new URLSearchParams(window.location.search);
-  // const guest = query.get("to");
+const Invitation = ({data, guest}) => {
 
   return (
     <div className="invitation-page">
-      <InvitationLeftContent />
+      <InvitationLeftContent groom={data.groom} bride={data.bride} guest={guest}/>
       <InvitationRightContent data={data}/>
     </div>
   );

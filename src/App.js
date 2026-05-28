@@ -5,15 +5,17 @@ import Invitation from "./pages/Invitation/Invitation";
 import Opening from "./pages/Opeening/Opening";
 
 import sound from "./music/music.mp3";
+import { invitationData } from "./data/invitation";
 
 function App() {
+  const data = invitationData;
+
   const audioRef = useRef(null);
 
   const [isOpened, setIsOpened] = useState(false);
-
   const [isClosing, setIsClosing] = useState(false);
-
   const [isPlaying, setIsPlaying] = useState(false);
+  const [guest, setGuest] = useState("");
 
   const playMusic = useCallback(() => {
     console.log("play music");
@@ -59,11 +61,23 @@ function App() {
     };
   }, [playMusic]);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const guestName = params.get("guest")
+
+    if(guestName){
+      setGuest(guestName);
+    }
+    else{
+      setGuest("Tamu Undangan");
+    }
+  }, [guest]);
+
   return (
     <>
-      {(isOpened || isClosing) && <Invitation />}
+      {(isOpened || isClosing) && <Invitation data={data} guest={guest}/>}
 
-      {!isOpened && <Opening onOpen={handleOpen} isClosing={isClosing} />}
+      {!isOpened && <Opening groom={data.groom} bride={data.bride} guest={guest} onOpen={handleOpen} isClosing={isClosing} />}
 
       <audio ref={audioRef} loop>
         <source src={sound} type="audio/mpeg" />

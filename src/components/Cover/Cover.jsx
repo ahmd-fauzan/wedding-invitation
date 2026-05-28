@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Cover.css";
 import { invitationData } from "../../data/invitation";
 
-export default function Cover() {
+export default function Cover({ groom, bride, date, address }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = invitationData.backgrounds;
@@ -16,19 +16,33 @@ export default function Cover() {
   }, [images.length]);
 
   const saveToCalendar = () => {
-    const startDate = "20260614T070000";
-    const endDate = "20260614T120000";
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
 
-    const title = "Wedding of Fauzan & Ai Lina";
+    const formatted = `${year}${month}${day}T070000`;
+    const startDate = formatted;
+    const endDate = formatted;
+
+    const title = `Wedding of ${bride} & ${groom}`;
 
     const details = "Join our wedding celebration";
 
-    const location = "Tasikmalaya, Indonesia";
+    const location = address;
 
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
 
     window.open(googleCalendarUrl, "_blank");
   };
+
+  const formatted = date
+    .toLocaleDateString("id-ID", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+    .replace(",", "");
 
   return (
     <div className="cover-section">
@@ -50,11 +64,15 @@ export default function Cover() {
         <div className="content">
           <p className="subtitle">The Wedding Of</p>
 
-          <h1 className="title">Ai Lina & Fauzan</h1>
+          <h1 className="title">
+            {bride} & {groom}
+          </h1>
 
-          <h2 className="date">Minggu 14 Juni 2026</h2>
+          <h2 className="date">{formatted}</h2>
 
-          <button className="open-button" onClick={saveToCalendar}>Save The Date</button>
+          <button className="open-button" onClick={saveToCalendar}>
+            Save The Date
+          </button>
         </div>
       </div>
     </div>
