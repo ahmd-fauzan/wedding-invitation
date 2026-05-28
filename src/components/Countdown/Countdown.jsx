@@ -14,8 +14,6 @@ const Countdown = ({date}) => {
       setTimeLeft(getTimeRemaining(weddingDate));
     }, 1000);
 
-    console.log(timeLeft);
-
     return () => clearInterval(interval);
   }, [weddingDate]);
   return (
