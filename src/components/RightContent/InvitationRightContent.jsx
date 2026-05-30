@@ -28,7 +28,7 @@ const InvitationRightContent = ({ data }) => {
       />
       <WeddingEvent date={data.date} address={data.address}/>
       <Gallery data={data} />
-      <Story firstStory={data.firstStory} secondStory={data.secondStory} thirdStory={data.thirdStory}/>
+      <Story stories={data.story}/>
       <Gift cardNumbers={data.cardNumbers}/>
       <Ending />
     </div>

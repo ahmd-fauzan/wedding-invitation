@@ -16,12 +16,14 @@ const Introduction = ({groomFullName, brideFullName, groomParent, brideParent, g
           image={brideImage}
           name={brideFullName}
           parentName={brideParent}
+          alias={"Putri dari"}
         />
         <Divider />
         <Profile
           image={groomImage}
           name={groomFullName}
           parentName={groomParent}
+          alias={"Putra dari"}
         />
       </div>
     </div>

@@ -3,24 +3,30 @@ export const invitationData = {
   bride: "Ai Lina",
   groomFullName: "Ahmad Fauzan",
   brideFullName: "Ai Lina Marlina",
-  groomParent: "Uyu Wahyuding & Imas Sumarni",
-  brideParent: "U. Lukman (Alm) & Wati Saripah",
+  groomParent: "Bapak Uyu Wahyudin & Ibu Imas Sumarni",
+  brideParent: "Bapak U. Lukman (Alm) & Ibu Wati Saripah",
   date: "2026-06-14",
   location: "Tasikmalaya",
   address:
     "Kp. Nanggorak RT.10/RW.05 Desa Jayamukti Kecamatan leuwisari Kab. Tasikmalaya",
-  firstStory: {
-    title: "Awal Bertemu",
-    desc: "Kami pertama kali bertemu saat SMP kelas 8 sebagai teman sekelas, namun belum saling dekat. Setelah sama-sama bekerja, kami kembali berkomunikasi melalui Facebook lalu berlanjut ke WhatsApp. Pertemuan di Situ Gede menjadi awal kedekatan kami hingga akhirnya tumbuh rasa cinta dan saling melengkapi satu sama lain.",
-  },
-  secondStory: {
-    title: "Acara Lamaran",
-    desc: "Setelah menjalani hubungan dan mengenal satu sama lain lebih dalam, kami memutuskan membawa hubungan ini ke jenjang yang lebih serius melalui acara lamaran yang bertepatan dengan momen Tahun Baru Hijriah, sebagai langkah awal menuju masa depan bersama.",
-  },
-  thirdStory: {
-    title: "Acara Resepsi",
-    desc: "Dengan penuh rasa syukur dan cinta, kami memutuskan untuk menikah dan memulai kehidupan baru bersama. Kami percaya bahwa setiap hubungan adalah tentang saling menerima, memahami, dan melengkapi kekurangan satu sama lain sebagai pasangan suami istri.",
-  },
+  story: [
+    {
+      title: "Perkenalan",
+      desc: "Pertemuan kami dimulai sejak SMP sebagai teman biasa namun belum saling dekat. Sepuluh tahun kemudian waktu mempertemukan kami kembali melalui sosial media.",
+    },
+    {
+      title: "Pendekatan",
+      desc: "Seiring berjalannya waktu obrolan ringan tumbuh menjadi cerita panjang yang hangat, kemudian kami memutuskan untuk bertemu secara langsung meskipun jarak membatasi momen pendekatan kita. Namun siapa sangka pertemuan sederhana itu menjadi awal dari pendekatan kami hingga akhirnya tumbuh rasa cinta dan saling melengkapi satu sama lain. Betapa indahnya menemukan seseorang yang membuat hati merasa pulang.",
+    },
+    {
+      title: "Lamaran",
+      desc: "tepat di tahun baru hijriah Atas  izin Allah serta Restu orang tua dan keluarga kami memutuskan lamaran. Dan disitulah kami yakin bahwa inilah cinta yang ingin kami jaga selamanya sebagai langkah awal menuju masa depan.",
+    },
+    {
+      title: "Nikah",
+      desc: "Dengan penuh rasa syukur dan cinta, kami memutuskan untuk menikah dan memulai kehidupan baru bersama. Kami percaya bahwa setiap hubungan adalah tentang saling menerima, memahami, dan melengkapi kekurangan satu sama lain sebagai pasangan suami istri.",
+    },
+  ],
   groomProfile: "/images/profile2.jpeg",
   brideProfile: "/images/profile1.jpeg",
   cardNumbers: [
@@ -33,7 +39,7 @@ export const invitationData = {
       cardName: "Ai Lina Marlina",
       bank: "BCA",
       cardNumber: "4530342901",
-    }
+    },
   ],
   gallery: [
     "/images/gallery1.jpeg",
@@ -41,11 +47,14 @@ export const invitationData = {
     "/images/gallery3.jpeg",
     "/images/gallery4.jpeg",
     "/images/gallery5.jpeg",
-    "/images/gallery6.jpeg",
+    "/images/animasi2.jpeg",
+    "/images/gallery7.jpeg",
+    "/images/gallery8.jpeg"
   ],
   backgrounds: [
     "/images/animasi1.jpeg",
     "/images/animasi2.jpeg",
     "/images/animasi3.webp",
+    "/images/animasi4.jpeg"
   ],
 };

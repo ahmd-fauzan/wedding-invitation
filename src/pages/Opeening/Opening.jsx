@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Opening.css";
 
-export default function Opening({ groom, bride, guest, onOpen, isClosing }) {
+export default function Opening({ groom, bride, guest, onOpen, isClosing, images }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -11,7 +11,7 @@ export default function Opening({ groom, bride, guest, onOpen, isClosing }) {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className={`opening-page ${isClosing ? "fade-out" : ""}`}>
@@ -40,9 +40,3 @@ export default function Opening({ groom, bride, guest, onOpen, isClosing }) {
     </div>
   );
 }
-
-const images = [
-    "/images/gallery5.jpg",
-    "/images/gallery6.jpg",
-    "/images/image1.webp",
-  ];

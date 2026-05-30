@@ -1,10 +1,10 @@
 import "./InvitationLeftContent.css";
 
-const InvitationLeftContent = ({groom, bride, guest}) => {
+const InvitationLeftContent = ({groom, bride, guest, image}) => {
   return (
     <div
       className="left-section"
-      style={{ backgroundImage: "url('/images/gallery5.jpg')" }}
+      style={{ backgroundImage: `url(${image})` }}
     >
       <div className="overlay"></div>
       <div className="content">

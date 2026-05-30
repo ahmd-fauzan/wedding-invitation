@@ -10,7 +10,11 @@ const Gift = ({ cardNumbers }) => {
         jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi gift
       </p>
       {cardNumbers.map((card, index) => (
-        <RekeningItem card_name={card.cardName} card_number={card.cardNumber} />
+        <RekeningItem
+          card_name={card.cardName}
+          card_number={card.cardNumber}
+          key={index}
+        />
       ))}
     </div>
   );

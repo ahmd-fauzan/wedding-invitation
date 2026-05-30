@@ -77,7 +77,7 @@ function App() {
     <>
       {(isOpened || isClosing) && <Invitation data={data} guest={guest}/>}
 
-      {!isOpened && <Opening groom={data.groom} bride={data.bride} guest={guest} onOpen={handleOpen} isClosing={isClosing} />}
+      {!isOpened && <Opening groom={data.groom} bride={data.bride} guest={guest} onOpen={handleOpen} isClosing={isClosing} images={data.backgrounds}/>}
 
       <audio ref={audioRef} loop>
         <source src={sound} type="audio/mpeg" />

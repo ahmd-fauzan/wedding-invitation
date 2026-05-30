@@ -6,7 +6,7 @@ const Invitation = ({data, guest}) => {
 
   return (
     <div className="invitation-page">
-      <InvitationLeftContent groom={data.groom} bride={data.bride} guest={guest}/>
+      <InvitationLeftContent groom={data.groom} bride={data.bride} guest={guest} image={data.backgrounds[0]}/>
       <InvitationRightContent data={data}/>
     </div>
   );
