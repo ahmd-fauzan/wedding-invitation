@@ -53,8 +53,8 @@ export const invitationData = {
   ],
   backgrounds: [
     "/images/animasi1.jpeg",
-    "/images/animasi2.jpeg",
     "/images/animasi3.webp",
+    "/images/animasi2.jpeg",
     "/images/animasi4.jpeg"
   ],
 };
