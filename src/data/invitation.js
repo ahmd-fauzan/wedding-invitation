@@ -16,7 +16,7 @@ export const invitationData = {
     },
     {
       title: "Pendekatan",
-      desc: "Seiring berjalannya waktu obrolan ringan tumbuh menjadi cerita panjang yang hangat, kemudian kami memutuskan untuk bertemu secara langsung meskipun jarak membatasi momen pendekatan kita. Namun siapa sangka pertemuan sederhana itu menjadi awal dari pendekatan kami hingga akhirnya tumbuh rasa cinta dan saling melengkapi satu sama lain. Betapa indahnya menemukan seseorang yang membuat hati merasa pulang.",
+      desc: "Seiring berjalannya waktu obrolan ringan tumbuh menjadi cerita panjang yang hangat, kemudian kami memutuskan untuk bertemu secara langsung meskipun jarak membatasi momen pendekatan kita. Namun siapa sangka pertemuan sederhana itu menjadi awal dari pendekatan kami hingga akhirnya tumbuh rasa cinta dan saling melengkapi satu sama lain. Dan betapa indahnya menemukan seseorang yang membuat hati merasa pulang.",
     },
     {
       title: "Lamaran",
